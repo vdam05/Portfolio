@@ -1,7 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+
+}
 .navigation {
     display: flex;
     flex-direction: row;
-    
+    justify-content: flex-end; 
+    gap: 2%;
     font-weight: bold;
     font-family: sans-serif;
+    background: radial-gradient(90deg, hsl())
+}
+#main-address {
+    color: red;
+    text-align: center;
 }
