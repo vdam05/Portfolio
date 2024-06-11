@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 :root {
-
+    --background-color1: hsl();
 }
 .navigation {
     display: flex;
