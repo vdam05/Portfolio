@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    border: 1px solid black; /*Used to see the container of each elements*/
 }
 :root {
     --background-color1: hsl();
@@ -7,13 +8,26 @@
 .navigation {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end; 
-    gap: 2%;
+    justify-content: center;
+    align-items: center; 
+    gap: 3%;
     font-weight: bold;
     font-family: sans-serif;
-    background: radial-gradient(90deg, hsl())
+    background: linear-gradient(45deg, #070070, #300045);
+    height: 10vh;
+    border-radius: 5px;
 }
+.list-item {
+    list-style: none;
+}
+.list-item a {
+    color: white;
+}
+.list-item a:hover {
+    background-color: hsl(15, 98%, 47%);
+}
+
 #main-address {
-    color: red;
+    color: hsl(6, 94%, 35%);
     text-align: center;
 }
