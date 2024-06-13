@@ -1,21 +1,35 @@
 * {
     box-sizing: border-box;
+    margin: 0; /*normalize css*/
+    padding: 0;
     border: 1px solid black; /*Used to see the container of each elements*/
 }
 :root {
-    --background-color1: hsl();
+    --menu-font: sans-serif;
 }
 .navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; 
-    gap: 3%;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(5, 1fr); 
     font-weight: bold;
     font-family: sans-serif;
     background: linear-gradient(45deg, #070070, #300045);
     height: 10vh;
-    border-radius: 5px;
+}
+.list {
+    grid-column: 12 / 15;
+    grid-row: 3 / 4;
+    place-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5%;
+}
+@media (max-width: 80%) {
+    .list {
+        grid-column: 6 / 9;
+    }
 }
 .list-item {
     list-style: none;
