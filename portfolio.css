@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0; /*normalize css*/
     padding: 0;
-    border: 1px solid black; /*Used to see the container of each elements*/
+    /*border: 1px solid black; /*Used to see the container of each elements*/
 }
 :root {
     --menu-font: sans-serif;
@@ -22,7 +22,7 @@ header {
     grid-template-rows: repeat(5, 1fr); 
     font-weight: bold;
     font-family: sans-serif;
-    background: hsl(221, 51%, 16%);
+    background: white;
     height: 100%; /*header is an indeterminate height*/
 }
 .list {
@@ -41,7 +41,7 @@ header {
     animation-name: menu-appear;
 }
 .list-item a {
-    color: white;
+    color: black;
 }
 .list-item a:link, .list-item a:visited {
     text-decoration: none;
