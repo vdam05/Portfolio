@@ -1,3 +1,4 @@
+/*Main css starts here*/
 * {
     box-sizing: border-box;
     margin: 0; /*normalize css*/
@@ -5,7 +6,7 @@
     /*border: 1px solid black; /*Used to see the container of each elements*/
 }
 :root {
-    --menu-font: sans-serif;
+    --menu-font: Roboto;
 }
 html {
     scroll-behavior: smooth;
@@ -21,7 +22,7 @@ header {
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(5, 1fr); 
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: var(--menu-font);
     background: white;
     height: 100%; /*header is an indeterminate height*/
 }
@@ -39,6 +40,20 @@ header {
     list-style: none;
     height: 100%;
     animation-name: menu-appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+}
+@keyframes menu-appear  {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 .list-item a {
     color: black;
