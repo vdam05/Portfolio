@@ -52,7 +52,6 @@ header {
     font-family: var(--menu-font);
     border-radius: 3px;
 }
-
 .list-item a:link, .list-item a:visited {
     text-decoration: none;
 }
@@ -66,13 +65,14 @@ header {
     background-position: center;
     background-repeat:no-repeat;
     background-size: cover;    
-    filter: grayscale(50%);
+    background-attachment: fixed;
     position: relative;
+    filter: none;
     z-index: -2;
 }
 .intro-paragraph {
-    height: 50%;
-    width: 40%;
+    height: 60%;
+    width: 60%;
     position: absolute;
     top: 30%;
     left: 5%;
@@ -80,8 +80,10 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    color: black;
+    color: red;
     font-family: var(--menu-font);
+    font-weight: 900;
+    font-size:x-large;
 }
 .intro-paragraph * {
     grid-column: 4 / 5;
