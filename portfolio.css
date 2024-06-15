@@ -7,9 +7,11 @@
 }
 :root {
     --menu-font: Roboto;
+    --menu-background-color: red;
 }
 html {
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 header {
     height: 8vh;
@@ -21,8 +23,6 @@ header {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(5, 1fr); 
-    font-weight: bold;
-    font-family: var(--menu-font);
     background: white;
     height: 100%; /*header is an indeterminate height*/
 }
@@ -35,29 +35,24 @@ header {
     justify-content: center;
     align-items: center;
     column-gap: 15%;
+    height: 100%;
 }
 .list-item {
     list-style: none;
-    height: 100%;
     animation-name: menu-appear;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 0ms;
     animation-iteration-count: 1;
+    height: 100%;
 }
-@keyframes menu-appear  {
-    0% {
-        transform: translateY(10px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-.list-item a {
+.list-item a{
     color: black;
+    font-weight: 900;
+    font-family: var(--menu-font);
+    border-radius: 3px;
 }
+
 .list-item a:link, .list-item a:visited {
     text-decoration: none;
 }
@@ -67,7 +62,7 @@ header {
 .intro-image{
     width: 100%;
     height: 100%;
-    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/008/023/852/small/abstract-colorful-geometric-shape-background-modern-color-background-for-your-website-vector.jpg");
+    background-image: url("./images/intro.jpg");
     background-position: center;
     background-repeat:no-repeat;
     background-size: cover;    
@@ -85,8 +80,20 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    color: white;
+    color: black;
+    font-family: var(--menu-font);
 }
 .intro-paragraph * {
     grid-column: 4 / 5;
+}
+/*Animations here*/
+@keyframes menu-appear  { /*translateY for moving an element. Opacity for transparent*/
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
