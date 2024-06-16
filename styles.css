@@ -67,7 +67,6 @@ header {
     background-size: cover;    
     background-attachment: fixed;
     position: relative;
-    filter: none;
     z-index: -2;
 }
 .intro-paragraph {

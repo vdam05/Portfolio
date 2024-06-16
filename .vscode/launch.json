@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open portfolio.html",
-            "file": "c:\\Users\\hoang\\OneDrive\\Documents\\Resume_Projects\\Portfolio\\index.html"
+            "file": "d:\\Resume_Projects\\Portfolio\\index.html"
         }
     ]
 }

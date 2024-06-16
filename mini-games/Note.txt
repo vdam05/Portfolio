@@ -1,0 +1,3 @@
+Here lies the links for the mini-games built in HTML, CSS, JavaScript
+1st one is an RPG game that is like command-line interface
+/*To be updated once progrezzed*/
