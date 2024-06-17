@@ -39,7 +39,9 @@ header {
 }
 .list-item {
     list-style: none;
-    animation-name: menu-appear;
+}
+.list-item, .intro-paragraph {
+    animation-name: appear-in;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 0ms;
@@ -57,6 +59,7 @@ header {
 }
 #intro {
     height: 100vh;
+    position: relative;
 }
 .intro-image{
     width: 100%;
@@ -66,29 +69,44 @@ header {
     background-repeat:no-repeat;
     background-size: cover;    
     background-attachment: fixed;
-    position: relative;
     z-index: -2;
 }
 .intro-paragraph {
     height: 60%;
     width: 60%;
     position: absolute;
-    top: 30%;
-    left: 5%;
+    top: 3%;
+    left: 10%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center; 
-    color: red;
+    color: white;
     font-family: var(--menu-font);
     font-weight: 900;
     font-size:x-large;
+}
+#first-sentence {
+    font-size: 5rem;
+}
+#clickable {
+    color: red;
+    cursor: pointer;
+    user-select: none;
+}
+#skills {
+    height: 80vh;
+}
+.skills-listed{
+    height: 100%;
+    background-color: hsl(226, 100%, 50%);
 }
 .intro-paragraph * {
     grid-column: 4 / 5;
 }
 /*Animations here*/
-@keyframes menu-appear  { /*translateY for moving an element. Opacity for transparent*/
+@keyframes appear-in  { /*translateY for moving an element. Opacity for transparent*/
     0% {
         transform: translateY(-10px);
         opacity: 0;
