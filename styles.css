@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0; /*normalize css*/
     padding: 0;
-    /*border: 1px solid black; /*Used to see the container of each elements*/
+    /*border: 1px solid white; /*Used to see the container of each elements*/
 }
 :root {
     --menu-font: Roboto;
@@ -23,7 +23,7 @@ header {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(5, 1fr); 
-    background: rgba(0, 0, 0, 0.5);
+    background: hsla(0, 0%, 0%, 0.5);
     height: 100%; /*header is an indeterminate height*/
 }
 .list {
@@ -67,17 +67,12 @@ header {
 #intro {
     height: 100vh;
     position: relative;
-}
-.intro-image{
-    width: 100%;
-    height: 100%;
     background: linear-gradient(to bottom,
     hsl(240, 100%, 4%) 0%,
     hsl(246, 94%, 7%) 25%,
     hsl(249, 96%, 9%) 50%,
     hsl(249, 91%, 13%) 75%,
     hsl(248, 88%, 17%) 100%);
-    z-index: -2;
 }
 .intro-paragraph {
     height: 60%;
@@ -104,14 +99,44 @@ header {
     cursor: pointer;
 }
 #skills {
-    height: 90vh;
+    height: 95vh;
+    background: linear-gradient(to bottom,
+    hsl(195, 53%, 79%), 
+    hsl(197, 71%, 73%));
+    z-index: -2;
+    position: relative;
 }
-.skills-listed{
-    height: 100%;
-    background-color: hsl(226, 100%, 50%);
+.skills-section{
+    width: 50%;
+    height: 75%;
+    font-family: var(--menu-font);
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    font-size: 2vw;
+    border: 10px dashed yellow;
+    border-radius: 5px;
 }
-.intro-paragraph * {
-    grid-column: 4 / 5;
+.skills-section h {
+    font-size: 3rem;
+}
+.skills-list {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    justify-content:space-around;
+    align-items: center;
+}
+.skills-list ol {
+    list-style: none;
+    text-align: center;
+}
+#projects {
+    height: 100vh;
+}
+#contacts {
+    height: 30vh;
 }
 /*Animations here*/
 @keyframes appear-in  { /*translateY for moving an element. Opacity for transparent*/
@@ -124,3 +149,4 @@ header {
         opacity: 1;
     }
 }
+/*Responsive here*/
