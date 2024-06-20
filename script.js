@@ -1,13 +1,12 @@
 let colors = ["red", "blue", "green", "cyan", "blueviolet", "brown"];
 let index = 0;
-let specialEffect = document.querySelector("#clickable");
-specialEffect.onclick = changeColors;
-
+let specialEffectName = document.querySelector("#clickable");
+specialEffectName.addEventListener('click', changeColors);
 function changeColors() {
     index++;
     if (index >= (colors.length)) {
         index = 0;
     } 
-    specialEffect.style.color = colors[index];
+    specialEffectName.style.color = colors[index];
     
 }

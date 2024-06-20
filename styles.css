@@ -1,4 +1,3 @@
-/*Main css starts here*/
 * {
     box-sizing: border-box;
     margin: 0; /*normalize css*/
@@ -13,6 +12,7 @@ html {
     scroll-behavior: smooth;
     overflow: hidden;
 }
+/*---------------------------------Header here-------------------------------------*/
 header {
     height: 8vh;
     position: sticky;
@@ -39,8 +39,6 @@ header {
 }
 .list-item {
     list-style: none;
-}
-.list-item {
     animation-name: appear-in;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -53,17 +51,33 @@ header {
     font-weight: 900;
     font-family: var(--menu-font);
     border-radius: 3px;
-    transition-duration: 0.5s;
-    transition-delay: 0ms;
-    transition-property: color;
-    transition-timing-function: ease-in-out;
 }
-.list-item a:hover {
-    color: red;
-}
-.list-item a:link, .list-item a:visited {
+.list-item a:link, .list-item a:visited{
     text-decoration: none;
 }
+.list-item a:hover {
+    outline: none;
+    color: red;
+}
+@keyframes appear-in  { /*translateY for moving an element. Opacity for transparent*/
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 500px) {
+    .list {
+        grid-column: 1 / 15;
+        column-gap: 5%;
+    }
+}
+/*---------------------------------Header ends here-------------------------------------*/
+
+/*---------------------------------Intro here-------------------------------------*/
 #intro {
     height: 100vh;
     position: relative;
@@ -82,7 +96,6 @@ header {
     left: 10%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center; 
     color: var(--font-color-intro);
@@ -98,6 +111,9 @@ header {
     color: red;
     cursor: pointer;
 }
+/*---------------------------------Intro ends here-------------------------------------*/
+
+/*---------------------------------Skills here-------------------------------------*/
 #skills {
     height: 95vh;
     background: linear-gradient(to bottom,
@@ -132,21 +148,49 @@ header {
     list-style: none;
     text-align: center;
 }
+/*---------------------------------Skills end here-------------------------------------*/
+
+/*---------------------------------Projects here-------------------------------------*/
 #projects {
     height: 100vh;
+    background: linear-gradient(to bottom,
+    hsl(158, 55%, 78%), 
+    hsl(83, 55%, 84%));
 }
+/*---------------------------------Projects end here-------------------------------------*/
+
+/*---------------------------------Contacts here-------------------------------------*/
 #contacts {
     height: 30vh;
+    background: linear-gradient(to bottom,
+    hsl(34, 44%, 69%), 
+    hsl(25, 76%, 31%));
 }
-/*Animations here*/
-@keyframes appear-in  { /*translateY for moving an element. Opacity for transparent*/
-    0% {
-        transform: translateY(-10px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
+.contact-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: black;
 }
-/*Responsive here*/
+.contact-socials a:link, .contact-socials a:visited {
+    text-decoration: none;
+    color: black;
+}
+.contact-socials a:hover {
+    color: white;
+}
+.socials-logo {
+    height: 50px;
+    width: 50px;
+    opacity: 0.5px;
+}
+
+.contact-message {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/*---------------------------------Contacts end here-------------------------------------*/
