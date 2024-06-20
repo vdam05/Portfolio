@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8"> <!--Universal charset-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Most effective responsive-->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta name="description" content="My portfolio showcasing my projects and personal information">
 		<title>My Portfolio</title>
 		<link rel="stylesheet" href="styles.css">
@@ -16,26 +16,10 @@
 		<header>
 			<nav class="navigation">
 				<ul class="list">
-					<div class="responsive-list-item">
-						<li class="list-item">
-							<a href="#intro">Introduction</a>
-						</li>
-					</div>
-					<div class="responsive-list-item">
-						<li class="list-item">
-							<a href="#skills">Skills</a>
-						</li>
-					</div>
-					<div class="responsive-list-item">
-						<li class="list-item">
-							<a href="#projects">Projects</a>
-						</li>
-					</div>
-					<div class="responsive-list-item">
-						<li class="list-item">
-							<a href="#contacts">Contacts</a>
-						</li>
-					</div>
+					<a class="list-item" href="#intro">Introduction</a>
+					<a class="list-item" href="#skills">Skills</a>
+					<a class="list-item" href="#projects">Projects</a>
+					<a class="list-item" href="#contacts">Contacts</a>
 				</ul>
 			</nav>
 		</header>
@@ -75,7 +59,15 @@
 				</article>
 			</section>
 			<section id="projects">
-				
+				<div class="projects-image"></div>
+				<!--Buttons to switch images-->
+				<label class="switching" for="projects-images-switch">
+					<input type="radio" class="image1" name="projects-images-switch">
+					<input type="radio" class="image2" name="projects-images-switch">
+					<input type="radio" class="image3" name="projects-images-switch">
+					<input type="radio" class="image4" name="projects-images-switch">
+					<input type="radio" class="image5" name="projects-images-switch">
+				</label>
 			</section>
 		</main>
 		<footer id="contacts">
