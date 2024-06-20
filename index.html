@@ -16,10 +16,11 @@
 		<header>
 			<nav class="navigation">
 				<ul class="list">
-					<a class="list-item" href="#intro">Introduction</a>
-					<a class="list-item" href="#skills">Skills</a>
-					<a class="list-item" href="#projects">Projects</a>
-					<a class="list-item" href="#contacts">Contacts</a>
+					<li class="list-item"><a href="#intro">Introduction</a></li>
+					<li class="list-item"><a href="#experience">Experience</a></li>
+					<li class="list-item"><a href="#skills">Skills</a></li>
+					<li class="list-item"><a href="#projects">Projects</a></li>
+					<li class="list-item"><a href="#contacts">Contacts</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -29,6 +30,11 @@
 					<h id="first-sentence">Hello, I am <span id="clickable">Dam</span></h>
 					<p>Just a Computer Science student looking for <span>internships</span></p>
 				</div>
+			</section>
+			<section id="experience">
+				<p class="sign">In Progress</p>
+				<div class="wooden-triangle-left"></div>
+				<div class="wooden-triangle-right"></div>
 			</section>
 			<section id="skills">
 				<!--Circles on the left side of this section with animations for styles-->
@@ -59,15 +65,16 @@
 				</article>
 			</section>
 			<section id="projects">
-				<div class="projects-image"></div>
 				<!--Buttons to switch images-->
 				<label class="switching" for="projects-images-switch">
-					<input type="radio" class="image1" name="projects-images-switch">
-					<input type="radio" class="image2" name="projects-images-switch">
-					<input type="radio" class="image3" name="projects-images-switch">
-					<input type="radio" class="image4" name="projects-images-switch">
-					<input type="radio" class="image5" name="projects-images-switch">
+					Here are my projects
+					<input type="radio" class="image1" id="imageId" name="projects-images-switch" checked>
+					<input type="radio" class="image2" id="imageId" name="projects-images-switch">
+					<input type="radio" class="image3" id="imageId" name="projects-images-switch">
+					<input type="radio" class="image4" id="imageId" name="projects-images-switch">
+					<input type="radio" class="image5" id="imageId" name="projects-images-switch">
 				</label>
+				<div class="projects-image"></div>
 			</section>
 		</main>
 		<footer id="contacts">

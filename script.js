@@ -1,8 +1,7 @@
-//Variables
+/*---------------------------INTRO--------------------------------------*/ 
+//Changing the color of the name
 let colors = ["red", "blue", "green", "cyan", "blueviolet", "brown"];
 let index = 0;
-
-/*---------------------------INTRO--------------------------------------*/ 
 let specialEffectName = document.querySelector("#clickable");
 specialEffectName.addEventListener('click', changeColors);
 function changeColors() {
@@ -13,16 +12,18 @@ function changeColors() {
     specialEffectName.style.color = colors[index];
     
 }
+//Changing the color of the header menu items
+let listItemSelect = document.querySelectorAll(".list-item");
+listItemSelect.forEach(item => item.addEventListener('click', menuSelected));
+function menuSelected (e) { //e for event
+}
 /*---------------------------INTRO--------------------------------------*/ 
 
+/*---------------------------SKILLS--------------------------------------*/ 
+
 /*---------------------------PROJECTS--------------------------------------*/ 
-let changeImage = document.querySelector(".projects-image");
-let option = document.querySelectorAll('.switching input[type="radio"]');
-option.addEventListener('click', switchImage);
-function switchImage(e) {
-    const currentImage = "";
-    currentImage += 
-    changeImage.style.backgroundImage = url(`./images/project-imgs/${current-image}.png`);
-}
+let imageSelections = document.querySelectorAll("#imageId");
+imageSelections.forEach(selection => selection.addEventListener('checked'))
+
 /*---------------------------PROJECTS--------------------------------------*/ 
 
