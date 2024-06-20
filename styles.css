@@ -10,7 +10,7 @@
 }
 html {
     scroll-behavior: smooth;
-    
+    overflow: hidden;
 }
 header, body, footer {
     font-family: var(--main-font);
@@ -28,6 +28,10 @@ header {
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(5, 1fr); 
     height: 100%; /*header is an indeterminate height*/
+}
+.shortened-list {
+    width: 
+    display: none; /*to hide until media queries*/
 }
 .list {
     grid-column: 8 / 15;
@@ -140,15 +144,6 @@ header {
     align-items: center;
     z-index: 1;
     font-size: 3rem;
-}
-
-@keyframes sign-animate {
-    from {
-
-    }
-    to {
-
-    }
 }
 .wooden-triangle-left, .wooden-triangle-right {
     width: 100%;
