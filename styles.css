@@ -6,14 +6,15 @@
 }
 :root {
     --main-font: Roboto, sans-serif;
-    --font-color-intro: hsl(0, 0%, 88%);
+    --font-color-menu: #e0e0e0;
+    --font-color-main: hsl(245, 100%, 8%);
 }
 html {
     scroll-behavior: smooth;
-    overflow: hidden;
 }
-header, body, footer {
+body {
     font-family: var(--main-font);
+    min-height: 500px;
 }
 /*---------------------------------Header here-------------------------------------*/
 header {
@@ -21,7 +22,7 @@ header {
     position: sticky;
     top: 0px;
     z-index: 5;
-    background: gray;
+    background-color: #d36336;
 }
 .navigation {
     display: grid;
@@ -30,9 +31,10 @@ header {
     height: 100%; /*header is an indeterminate height*/
 }
 .shortened-list {
-    width: 
     display: none; /*to hide until media queries*/
+
 }
+
 .list {
     grid-column: 8 / 15;
     grid-row: 3 / 4;
@@ -43,24 +45,21 @@ header {
     align-items: center;
     column-gap: 10%;
     height: 100%;
-}
-.list-item {
-    list-style: none;
-    background-color: transparent;
-    border-radius: 3px;
     animation-name: appear-in;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 0ms;
     animation-iteration-count: 1;
 }
-.list-item a {
+.list a {
+    background: transparent;
     height: 100%;
-    color: var(--font-color-intro);
+    color: var(--font-color-menu);
     font-weight: 900;
-}
-.list-item a:link, .list-item a:visited {
     text-decoration: none;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
 }
 @keyframes appear-in  { /*translateY for moving an element. Opacity for transparent*/
     0% {
@@ -73,8 +72,11 @@ header {
     }
 }
 @media screen and (max-width: 500px) {
-    .list {
+    .shortened-list {
         display: block;
+    }
+    .list {
+        display: none;
     }
 }
 /*---------------------------------Header ends here-------------------------------------*/
@@ -83,24 +85,35 @@ header {
 #intro {
     height: 100vh;
     position: relative;
-    background: linear-gradient(to bottom,
-    hsl(240, 100%, 4%) 0%,
-    hsl(246, 94%, 7%) 25%,
-    hsl(249, 96%, 9%) 50%,
-    hsl(249, 91%, 13%) 75%,
-    hsl(248, 88%, 17%) 100%);
+}
+.left-half {
+    width: 50%;
+    height: 100%;
+    background-color:#3498DB;
+}
+.right-half {
+    width: 50%;
+    height: 100%;
+    background-color: #00AAFF;
+    background-image: url(./images/intro-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0%;
+    left: 50%;
 }
 .intro-paragraph {
     height: 60%;
     width: 60%;
     position: absolute;
     top: 3%;
-    left: 10%;
+    left: 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    color: var(--font-color-intro);
+    color: var(--font-color-main);
     font-weight: 900;
     font-size:x-large;
     user-select: none;
@@ -117,12 +130,7 @@ header {
 /*---------------------------------Experience here-------------------------------------*/
 #experience {
     height: 100vh;
-    background: linear-gradient(to bottom,
-    rgb(32, 37, 104) 0%,      
-    rgb(43, 50, 137) 25%,    
-    rgb(64, 75, 171) 50%,     
-    rgb(97, 112, 192) 75%,    
-    rgb(147, 171, 230) 100%);
+    background: #EE5622;
     position: relative;
 }
 .sign, .wooden-triangle-left, .wooden-triangle-right {
@@ -170,6 +178,37 @@ header {
     z-index: -2;
     position: relative;
 }
+.circles-drawing {
+    height: 90%;
+    width: 30%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.circles {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+#circle1 {
+    background-color: red;
+}
+#circle2 {
+    background-color: yellow;
+}
+#circle3 {
+    background-color: blue;
+}
+@keyframes cool-circles {
+    0% {
+
+    }
+}
 .skills-section{
     width: 50%;
     height: 75%;
@@ -203,6 +242,7 @@ header {
     background: linear-gradient(to bottom,
     hsl(158, 55%, 78%), 
     hsl(83, 55%, 84%));
+    positioN: relative;
 }
 .projects-image {
     height: 80%;
@@ -210,22 +250,36 @@ header {
     background-image: url(./images/project-imgs/image1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    top: 5%;
-    left: 10%;
+    margin: auto;
 }
 .switching {
     display:inline-block;
-    height: 10%;
     width: 80%;
+    height: 10%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     column-gap: 2%;
     position: relative;
-    top: 5%;
+    top: 2%;
     left: 10%;
+}
+.imageId {
+    height: 25px;
+    width: 25px;
+    user-select: none;
+    background: transparent;
+}
+#image1 {
+    background: red;
+}
+.project-image-cap {
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;   
+    align-items: center;
 }
 
 /*---------------------------------Projects end here-------------------------------------*/

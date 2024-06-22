@@ -15,21 +15,28 @@
 	<body>
 		<header>
 			<nav class="navigation">
-				<div class="shortened-list"></div>
+				<div class="shortened-list">
+					<span></span>
+				</div>
 				<ul class="list">
-					<li class="list-item"><a href="#intro">Introduction</a></li>
-					<li class="list-item"><a href="#experience">Experience</a></li>
-					<li class="list-item"><a href="#skills">Skills</a></li>
-					<li class="list-item"><a href="#projects">Projects</a></li>
-					<li class="list-item"><a href="#contacts">Contacts</a></li>
+					<a href="#intro">Introduction</a>
+					<a href="#experience">Experience</a>
+					<a href="#skills">Skills</a>
+					<a href="#projects">Projects</a>
+					<a href="#contacts">Contacts</a>
 				</ul>
 			</nav>
 		</header>
 		<main>
 			<section id="intro">
+				<div class="left-half"></div>
+				<div class="right-half"></div>
 				<div class="intro-paragraph">
 					<h id="first-sentence">Hello, I am <span id="clickable">Dam</span></h>
 					<p>Just a Computer Science student looking for <span>internships</span></p>
+				</div>
+				<div class="button-call">
+					<button>Get to know more about me!</button>
 				</div>
 			</section>
 			<section id="experience">
@@ -40,9 +47,9 @@
 			<section id="skills">
 				<!--Circles on the left side of this section with animations for styles-->
 				<div class="circles-drawing">
-					<div class="circles"></div>
-					<div class="circles"></div>
-					<div class="circles"></div>
+					<div class="circles" id="circle1"></div>
+					<div class="circles" id="circle2"></div>
+					<div class="circles" id="circle3"></div>
 				</div>
 				<!--Ends here-->
 				<article class="skills-section">
@@ -67,15 +74,16 @@
 			</section>
 			<section id="projects">
 				<!--Buttons to switch images-->
-				<label class="switching" for="projects-images-switch">
+				<label class="switching" for="projects-images-switch" aria-label="buttonSwitching">
 					Here are my projects
-					<input type="radio" class="image1" id="imageId" name="projects-images-switch" checked>
-					<input type="radio" class="image2" id="imageId" name="projects-images-switch">
-					<input type="radio" class="image3" id="imageId" name="projects-images-switch">
-					<input type="radio" class="image4" id="imageId" name="projects-images-switch">
-					<input type="radio" class="image5" id="imageId" name="projects-images-switch">
+					<button id="image1" class="imageId" name="projects-images-switch"></button>
+					<button id="image2" class="imageId" name="projects-images-switch"></button>
+					<button id="image3" class="imageId" name="projects-images-switch"></button>
+					<button id="image4" class="imageId" name="projects-images-switch"></button>
+					<button id="image5" class="imageId" name="projects-images-switch"></button>
 				</label>
 				<div class="projects-image"></div>
+				<div class="project-image-cap">This is a placeholder</div>
 			</section>
 		</main>
 		<footer id="contacts">
