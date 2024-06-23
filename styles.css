@@ -11,17 +11,18 @@
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
     font-family: var(--main-font);
 }
 /*---------------------------------Header here-------------------------------------*/
 header {
-    height: 5vh;
+    height: 8vh;
     position: sticky;
     top: 0px;
     z-index: 5;
-    background-color: #d36336;
+    background: #0A014F;
 }
 .navigation {
     display: grid;
@@ -31,9 +32,18 @@ header {
 }
 .shortened-list {
     display: none; /*to hide until media queries*/
-
+    height: 90%;
+    width: 20%;
+    grid-column: 10 / 15;
+    grid-row: 3 / 4;
+    place-items: center;
 }
-
+.black-bar {
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    row-gap: 3%;
+}
 .list {
     grid-column: 8 / 15;
     grid-row: 3 / 4;
@@ -105,10 +115,10 @@ header {
 /*---------------------------------Experience here-------------------------------------*/
 #experience {
     height: 100vh;
-    background: #EE5622;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     position: relative;
 }
-.sign, .wooden-triangle-left, .wooden-triangle-right {
+.sign {
     background-image: url("./images/closed.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,28 +138,12 @@ header {
     z-index: 1;
     font-size: 3rem;
 }
-.wooden-triangle-left, .wooden-triangle-right {
-    width: 100%;
-    height: 10%;
-    position: absolute;
-    top: 45%;
-}
-.wooden-triangle-left {
-    transform-origin: center;
-    transform: rotate(24deg);
-}
-.wooden-triangle-right {
-    transform-origin: center;
-    transform: rotate(-24deg);
-}
 /*---------------------------------Experience ends here-------------------------------------*/
 
 /*---------------------------------Skills here-------------------------------------*/
 #skills {
     height: 95vh;
-    background: linear-gradient(to bottom,
-    hsl(195, 53%, 79%), 
-    hsl(197, 71%, 73%));
+    background-image: linear-gradient(180deg,  rgba(84,212,228,1) 0.2%, rgba(68,36,164,1) 99.9%);
     z-index: -2;
     position: relative;
 }
@@ -207,10 +201,8 @@ header {
 /*---------------------------------Projects here-------------------------------------*/
 #projects {
     height: 100vh;
-    background: linear-gradient(to bottom,
-    hsl(158, 55%, 78%), 
-    hsl(83, 55%, 84%));
-    positioN: relative;
+    background-image: linear-gradient( 91.2deg,  rgba(136,80,226,1) 4%, rgba(16,13,91,1) 96.5% );
+    position: relative;
 }
 .projects-image {
     height: 80%;
@@ -239,7 +231,7 @@ header {
     height: 25px;
     width: 25px;
     user-select: none;
-    background: transparent;
+    background: white;
 }
 #image1 {
     background: red;
@@ -259,20 +251,25 @@ header {
 
 /*---------------------------------Contacts here-------------------------------------*/
 #contacts {
-    height: 30vh;
-    background: linear-gradient(to bottom,
-    hsl(34, 44%, 69%), 
-    hsl(25, 76%, 31%));
+    height: 15vh;
+    background-image: linear-gradient(to right, rgba(2,37,78,1),rgba(4,56,126,1));
+    position: relative;
 }
 .contact-socials {
+    height: 100%;
+    width: 50%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    color: black;
+    align-items: center;
+    color: white;
+    column-gap: 5%;
+
 }
 .contact-socials a:link, .contact-socials a:visited {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .contact-socials a:hover {
     color: white;
@@ -284,12 +281,18 @@ header {
 }
 
 .contact-message {
-    height: 50%;
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: absolute; 
+    top: 0%;
+    left: 50%;
+    color: white;
+    transform: translateX(30px);
 }
 /*---------------------------------Contacts end here-------------------------------------*/
 

@@ -21,7 +21,7 @@ function menuSelected (e) {
         item.style.textUnderlineOffset = "0%";
         item.style.textDecoration = "none";
     }
-    e.currentTarget.style.color = "black";
+    e.currentTarget.style.color = "rgb(250, 250, 102)";
     e.currentTarget.style.textDecoration = "underline";
     e.currentTarget.style.textUnderlineOffset = "25%";
 }
