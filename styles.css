@@ -14,7 +14,6 @@ html {
 }
 body {
     font-family: var(--main-font);
-    min-height: 500px;
 }
 /*---------------------------------Header here-------------------------------------*/
 header {
@@ -69,14 +68,6 @@ header {
     100% {
         transform: translateY(0px);
         opacity: 1;
-    }
-}
-@media screen and (max-width: 500px) {
-    .shortened-list {
-        display: block;
-    }
-    .list {
-        display: none;
     }
 }
 /*---------------------------------Header ends here-------------------------------------*/
@@ -270,12 +261,12 @@ header {
     background: red;
 }
 .project-image-cap {
-    width: 100%;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;   
-    align-items: center;
+    width: fit-content;
+    background: beige;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
 }
 
 /*---------------------------------Projects end here-------------------------------------*/
@@ -315,3 +306,21 @@ header {
     align-items: center;
 }
 /*---------------------------------Contacts end here-------------------------------------*/
+
+/*All media queries*/
+@media only screen and (max-width: 600px) {
+    .list {
+        display: none;
+    }
+    .shortened-list {
+        display: block;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .list {
+        grid-column: 1 / 15;
+        column-gap: 5%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+}
