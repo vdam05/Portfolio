@@ -18,7 +18,7 @@ body {
 }
 /*---------------------------------Header here-------------------------------------*/
 header {
-    height: 8vh;
+    height: 5vh;
     position: sticky;
     top: 0px;
     z-index: 5;
@@ -178,61 +178,54 @@ header {
     z-index: -2;
     position: relative;
 }
-.circles-drawing {
-    height: 90%;
-    width: 30%;
-    position: absolute;
-    left: 5%;
-    top: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.circles {
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-    border: 1px solid black;
-}
-#circle1 {
-    background-color: red;
-}
-#circle2 {
-    background-color: yellow;
-}
-#circle3 {
-    background-color: blue;
-}
-@keyframes cool-circles {
-    0% {
 
-    }
-}
 .skills-section{
-    width: 50%;
+    width: 80%;
     height: 75%;
     position: absolute;
-    left: 45%;
+    left: 10%;
     top: 10%;
-    font-size: 2vw;
-    border: 10px dashed yellow;
-    border-radius: 5px;
+    font-size: 2rem;
 }
-.skills-section h {
-    font-size: 3rem;
+.about-me-paragraph {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+}
+.about-me-paragraph h {
+    font-size: 5rem;
+    font-weight: 900;
+    color: red;
+}
+.about-me-paragraph p {
+    text-align: center;
+}
+.skills-section div ol, .about-me-paragraph {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
 }
 .skills-list {
-    height: 50%;
+    height: 55%;
     display: flex;
     flex-direction: row;
-    flex-shrink: 1;
     justify-content:space-around;
     align-items: center;
 }
 .skills-list ol {
+    width: 40%;
+    height: 100%;
     list-style: none;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 /*---------------------------------Skills end here-------------------------------------*/
 
@@ -251,6 +244,8 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     margin: auto;
+    border: 5px solid yellow;
+    border-radius: 10px;
 }
 .switching {
     display:inline-block;
@@ -278,6 +273,7 @@ header {
     width: 100%;
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;   
     align-items: center;
 }

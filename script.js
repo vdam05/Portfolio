@@ -29,21 +29,19 @@ function menuSelected (e) {
 
 /*---------------------------SKILLS--------------------------------------*/ 
 
+/*---------------------------SKILLS--------------------------------------*/ 
+
 /*---------------------------PROJECTS--------------------------------------*/ 
 //Switching project image and captions
 let captionArray = [
     {
         name: "image1",
-        caption: "This is my first Java project about making a basic game",
+        caption: "This is my first Java project about making a basic game using StdDraw",
     },
     {
         name: "image2",
-        caption: "Nothing here just yet",
+        caption: "My website built with plain HTML, CSS, and JavaScript",
     },
-    {
-        name: "image3",
-        caption: "My website built with plain HTML, CSS, and JavaScript"
-    }
 ];
 let projectButtons = document.querySelectorAll(".imageId");
 let projectImage = document.querySelector(".projects-image");
@@ -66,4 +64,10 @@ projectButtons.forEach((button) => button.addEventListener("click", (e) => {
     projectImageCaption.innerText = chosenCaption;
 }));
 /*---------------------------PROJECTS--------------------------------------*/ 
+
+/*---------------------------CONTACTS--------------------------------------*/ 
+
+/*---------------------------CONTACTS--------------------------------------*/ 
+
+
 
