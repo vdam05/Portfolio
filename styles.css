@@ -75,24 +75,8 @@ header {
 /*---------------------------------Intro here-------------------------------------*/
 #intro {
     height: 100vh;
+    background: linear-gradient(to right, #3498DB 0%, #3498DB 50%, #00AAFF 50%, #00AAFF 100% );
     position: relative;
-}
-.left-half {
-    width: 50%;
-    height: 100%;
-    background-color:#3498DB;
-}
-.right-half {
-    width: 50%;
-    height: 100%;
-    background-color: #00AAFF;
-    background-image: url(./images/intro-image.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
-    position: absolute;
-    top: 0%;
-    left: 50%;
 }
 .intro-paragraph {
     height: 60%;
@@ -262,11 +246,13 @@ header {
 }
 .project-image-cap {
     width: fit-content;
+    height: fit-content;
     background: beige;
     border: 1px solid black;
     border-radius: 5px;
     display: block;
     margin: auto;
+    transform: translateY(50%);
 }
 
 /*---------------------------------Projects end here-------------------------------------*/
