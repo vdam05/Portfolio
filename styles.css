@@ -32,11 +32,6 @@ header {
 }
 .shortened-list {
     display: none; /*to hide until media queries*/
-    height: 90%;
-    width: 20%;
-    grid-column: 10 / 15;
-    grid-row: 3 / 4;
-    place-items: center;
 }
 .black-bar {
     width: 50px;
@@ -226,12 +221,14 @@ header {
     position: relative;
     top: 2%;
     left: 10%;
+    color: white;
 }
 .imageId {
     height: 25px;
     width: 25px;
     user-select: none;
     background: white;
+    cursor:pointer;
 }
 #image1 {
     background: red;
@@ -293,6 +290,8 @@ header {
     left: 50%;
     color: white;
     transform: translateX(30px);
+    font-size: 2rem;
+    text-align: center;
 }
 /*---------------------------------Contacts end here-------------------------------------*/
 
