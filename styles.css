@@ -33,12 +33,6 @@ header {
 .shortened-list {
     display: none; /*to hide until media queries*/
 }
-.black-bar {
-    width: 50px;
-    height: 5px;
-    background-color: black;
-    row-gap: 3%;
-}
 .list {
     grid-column: 8 / 15;
     grid-row: 3 / 4;
@@ -245,6 +239,10 @@ header {
 }
 
 /*---------------------------------Projects end here-------------------------------------*/
+
+/*---------------------------------More projects here-------------------------------------*/
+
+/*---------------------------------More projects end here-------------------------------------*/
 
 /*---------------------------------Contacts here-------------------------------------*/
 #contacts {

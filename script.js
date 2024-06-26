@@ -52,7 +52,7 @@ projectButtons.forEach((button) => button.addEventListener("click", (e) => {
     let chosenCaption = "";
     projectImage.style.backgroundImage = chosenImg;
     projectButtons.forEach((button) => {
-        button.style.backgroundColor = "transparent";
+        button.style.backgroundColor = "white";
     })
     chosenButton.style.backgroundColor = "red";
     projectImageCaption.innerText = "";
