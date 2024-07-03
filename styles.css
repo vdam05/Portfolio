@@ -98,6 +98,10 @@ header {
 #clickable {
     color: red;
     cursor: pointer;
+    transition-property: color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0ms;
 }
 /*---------------------------------Intro ends here-------------------------------------*/
 
@@ -133,7 +137,6 @@ header {
 #skills {
     height: 95vh;
     background-image: linear-gradient(180deg,  rgba(84,212,228,1) 0.2%, rgba(68,36,164,1) 99.9%);
-    z-index: -2;
     position: relative;
 }
 
@@ -171,7 +174,7 @@ header {
     height: 55%;
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
 }
 .skills-list ol {
@@ -184,6 +187,15 @@ header {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 5%;
+}
+.lang-li {
+    display: none;
+    transition: display 1s ease-in-out 0ms; 
+}
+.tech-li {
+    display: none;
+    transition: display 1s ease-in-out 0ms;
 }
 /*---------------------------------Skills end here-------------------------------------*/
 
@@ -204,7 +216,7 @@ header {
     border-radius: 10px;
 }
 .switching {
-    display:inline-block;
+    display: inline;
     width: 80%;
     height: 10%;
     display: flex;
@@ -237,12 +249,11 @@ header {
     margin: auto;
     transform: translateY(50%);
 }
-
+.javascript-hover:hover {
+    
+}
 /*---------------------------------Projects end here-------------------------------------*/
 
-/*---------------------------------More projects here-------------------------------------*/
-
-/*---------------------------------More projects end here-------------------------------------*/
 
 /*---------------------------------Contacts here-------------------------------------*/
 #contacts {

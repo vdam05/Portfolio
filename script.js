@@ -28,6 +28,26 @@ function menuSelected (e) {
 /*---------------------------INTRO--------------------------------------*/ 
 
 /*---------------------------SKILLS--------------------------------------*/ 
+//Interactable skills lists
+const selectable = document.querySelectorAll(".skills-list ol > div");
+const languageItem = document.querySelectorAll(".lang-li");
+console.log(languageItem);
+const technologyItem = document.querySelectorAll(".tech-li");
+selectable.forEach((each) => each.addEventListener("click", (e) => {
+    const which = e.target;
+    switch (which.id) {
+        case "selectable-lang": {
+            languageItem.forEach((item) => item.style.display = "block");
+            technologyItem.forEach((item) => item.style.display = "none");
+            break;
+        }
+        case "selectable-tech": {
+            languageItem.forEach((item) => item.style.display = "none");
+            technologyItem.forEach((item) => item.style.display = "block");
+            break;
+        }
+    }
+}));
 
 /*---------------------------SKILLS--------------------------------------*/ 
 
@@ -40,7 +60,7 @@ let captionArray = [
     },
     {
         name: "image2",
-        caption: "My website built with plain HTML, CSS, and JavaScript",
+        caption: "My website built with plain HTML, CSS, and ",
     },
 ];
 let projectButtons = document.querySelectorAll(".imageId");
@@ -61,7 +81,12 @@ projectButtons.forEach((button) => button.addEventListener("click", (e) => {
     } catch (error) {
         chosenCaption= "Seems like there is nothing here??? Check out my other things then.";
     }
-    projectImageCaption.innerText = chosenCaption;
+    projectImageCaption.innerHTML = chosenCaption;
+    if (chosenButton.id === "image2") {
+        projectImageCaption.innerHTML += `
+            <strong class="javascript-hover">JavaScript</strong>
+        `;
+    }
 }));
 /*---------------------------PROJECTS--------------------------------------*/ 
 
