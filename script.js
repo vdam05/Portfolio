@@ -29,25 +29,19 @@ function menuSelected (e) {
 
 /*---------------------------SKILLS--------------------------------------*/ 
 //Interactable skills lists
-const selectable = document.querySelectorAll(".skills-list ol > div");
-const languageItem = document.querySelectorAll(".lang-li");
-console.log(languageItem);
-const technologyItem = document.querySelectorAll(".tech-li");
-selectable.forEach((each) => each.addEventListener("click", (e) => {
-    const which = e.target;
-    switch (which.id) {
-        case "selectable-lang": {
-            languageItem.forEach((item) => item.style.display = "block");
-            technologyItem.forEach((item) => item.style.display = "none");
-            break;
-        }
-        case "selectable-tech": {
-            languageItem.forEach((item) => item.style.display = "none");
-            technologyItem.forEach((item) => item.style.display = "block");
-            break;
-        }
+const openList = (list) => {
+    //Note: We are accessing list's objects
+    const heading = list.querySelector(".prog-heading");
+    const mainList = list.querySelector(".prog-list");
+    list.classList.toggle("active");
+    if (list.classList.contains("active")) {
+        heading.style.transform = "translateY(-100%)";
+        mainList.style.top = "0%";
+    } else {
+        heading.style.transform = "translateY(0%)";
+        mainList.style.top = "100%";
     }
-}));
+}
 
 /*---------------------------SKILLS--------------------------------------*/ 
 
@@ -66,7 +60,7 @@ let captionArray = [
 let projectButtons = document.querySelectorAll(".imageId");
 let projectImage = document.querySelector(".projects-image");
 let projectImageCaption = document.querySelector(".project-image-cap");
-projectButtons.forEach((button) => button.addEventListener("click", (e) => {
+const mainCaption = (e) => {
     const chosenButton = e.currentTarget;
     const chosenImg = `url(./images/project-imgs/${chosenButton.id}.png)`;
     let chosenCaption = "";
@@ -87,7 +81,8 @@ projectButtons.forEach((button) => button.addEventListener("click", (e) => {
             <strong class="javascript-hover">JavaScript</strong>
         `;
     }
-}));
+};
+projectButtons.forEach((button) => button.addEventListener("click", mainCaption));
 /*---------------------------PROJECTS--------------------------------------*/ 
 
 /*---------------------------CONTACTS--------------------------------------*/ 

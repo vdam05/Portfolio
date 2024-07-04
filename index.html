@@ -45,17 +45,21 @@
 						</p>
 					</div>
 					<div class="skills-list">
-						<ol class="program-langs"> 
-							<div id="selectable-lang">Programming Languages</div>
-							<li class="lang-li">Java</li>
-							<li class="lang-li">HTML, CSS, Javascript</li>
-							<li class="lang-li">x86 Assembly</li>
+						<ol class="program-langs" onclick="openList(this)"> <!--'this' keyword refers to element-->
+							<div class="prog-heading">Programming Languages</div>
+							<div class="prog-list">
+								<li>Java</li>
+								<li>HTML, CSS, Javascript</li>
+								<li>x86 Assembly</li>
+							</div>
 						</ol>
-						<ol class="technologies">
-							<div id="selectable-tech">Technologies</div>
-							<li class="tech-li">Git</li>
-							<li class="tech-li">Bash</li>
-							<li class="tech-li">PowerShell</li>
+						<ol class="technologies" onclick = "openList(this)">
+							<div class="prog-heading">Technologies</div>
+							<div class="prog-list">
+								<li>Git</li>
+								<li>Bash</li>
+								<li>PowerShell</li>
+							</div>
 						</ol>
 					</div>
 				</article>
