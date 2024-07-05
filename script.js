@@ -2,7 +2,7 @@
 //Changing the color of the name
 let colors = ["red", "blue", "green", "cyan", "blueviolet", "brown"];
 let index = 0;
-let specialEffectName = document.querySelector("#clickable");
+const specialEffectName = document.querySelector("#clickable");
 specialEffectName.addEventListener('click', changeColors);
 function changeColors() {
     index++;
@@ -13,7 +13,7 @@ function changeColors() {
     
 }
 //Changing the color of the header menu items
-let listItemSelect = document.querySelectorAll(".list a");
+const listItemSelect = document.querySelectorAll(".list a");
 listItemSelect.forEach(item => item.addEventListener('click', menuSelected));
 function menuSelected (e) { 
     for (const item of listItemSelect) {
@@ -27,15 +27,21 @@ function menuSelected (e) {
 }
 /*---------------------------INTRO--------------------------------------*/ 
 
-/*---------------------------SKILLS--------------------------------------*/ 
+/*---------------------------SKILLS--------------------------------------*/
+//About-me-paragraph with interactable heading
+const mainHeader = document.querySelector(".about-me-paragraph h");
+const appearingPar = document.querySelector(".about-me-paragraph p");
+mainHeader.addEventListener("click", () => {
+   appearingPar.style.opacity = "1";
+}) 
 //Interactable skills lists
 const openList = (list) => {
     //Note: We are accessing list's objects
     const heading = list.querySelector(".prog-heading");
     const mainList = list.querySelector(".prog-list");
-    list.classList.toggle("active");
+    list.classList.toggle("active"); //as a way to gauge status
     if (list.classList.contains("active")) {
-        heading.style.transform = "translateY(-100%)";
+        heading.style.transform = "translateY(-25%)";
         mainList.style.top = "0%";
     } else {
         heading.style.transform = "translateY(0%)";
@@ -47,6 +53,9 @@ const openList = (list) => {
 
 /*---------------------------PROJECTS--------------------------------------*/ 
 //Switching project image and captions
+const extraString = `
+    <strong class="javascript-extra">JavaScript</strong>
+`;
 let captionArray = [
     {
         name: "image1",
@@ -75,12 +84,7 @@ const mainCaption = (e) => {
     } catch (error) {
         chosenCaption= "Seems like there is nothing here??? Check out my other things then.";
     }
-    projectImageCaption.innerHTML = chosenCaption;
-    if (chosenButton.id === "image2") {
-        projectImageCaption.innerHTML += `
-            <strong class="javascript-hover">JavaScript</strong>
-        `;
-    }
+    projectImageCaption.innerHTML = chosenButton.id === "image2" ? chosenCaption + extraString : chosenCaption;
 };
 projectButtons.forEach((button) => button.addEventListener("click", mainCaption));
 /*---------------------------PROJECTS--------------------------------------*/ 

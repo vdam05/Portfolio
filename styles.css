@@ -103,6 +103,9 @@ header {
     transition-timing-function: ease-in-out;
     transition-delay: 0ms;
 }
+.resume-button {
+    display: none;
+}
 /*---------------------------------Intro ends here-------------------------------------*/
 
 /*---------------------------------Experience here-------------------------------------*/
@@ -161,9 +164,12 @@ header {
     font-size: 5rem;
     font-weight: 900;
     color: red;
+    cursor: pointer;
 }
 .about-me-paragraph p {
     text-align: center;
+    opacity: 0;
+    transition: opacity 1.75s ease 0ms; 
 }
 .skills-section div ol, .about-me-paragraph {
     border: 1px solid black;
@@ -227,7 +233,7 @@ header {
 .projects-image {
     height: 80%;
     width: 80%;
-    background-image: url(./images/project-imgs/image1.png);
+    background-image: none;
     background-repeat: no-repeat;
     background-size: cover;
     margin: auto;
@@ -257,9 +263,6 @@ header {
     background: white;
     cursor:pointer;
 }
-#image1 {
-    background: red;
-}
 .project-image-cap {
     width: fit-content;
     height: fit-content;
@@ -269,9 +272,6 @@ header {
     display: block;
     margin: auto;
     transform: translateY(50%);
-}
-.javascript-hover:hover {
-    
 }
 /*---------------------------------Projects end here-------------------------------------*/
 
