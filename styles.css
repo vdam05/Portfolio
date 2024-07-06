@@ -18,7 +18,7 @@ body {
 }
 /*---------------------------------Header here-------------------------------------*/
 header {
-    height: 8vh;
+    height: 3rem;
     position: sticky;
     top: 0px;
     z-index: 5;
@@ -27,22 +27,22 @@ header {
 .navigation {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(5, 1fr); 
+    grid-template-rows: repeat(5, 1fr);
+    align-items: center;
     height: 100%; /*header is an indeterminate height*/
 }
 .shortened-list {
     display: none; /*to hide until media queries*/
 }
 .list {
-    grid-column: 8 / 15;
+    grid-column: 9 / 15;
     grid-row: 3 / 4;
-    place-items: center;
+    place-items: center flex-end;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     column-gap: 10%;
-    height: 100%;
     animation-name: appear-in;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -240,7 +240,9 @@ header {
     border: 5px solid yellow;
     border-radius: 10px;
     transition: transform 1s ease-in-out;
-    transform: translateX("0%");
+    transform: translateX(0%);
+    position: relative;
+    overflow: hidden;
 }
 .switching {
     display: inline;
@@ -326,7 +328,7 @@ header {
 /*---------------------------------Contacts end here-------------------------------------*/
 
 /*All media queries*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .list {
         display: none;
     }
@@ -334,11 +336,11 @@ header {
         display: block;
     }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
     .list {
-        grid-column: 1 / 15;
-        column-gap: 5%;
+        grid-column: 7 / 15;
+        column-gap: 7.5%;
     }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
 }

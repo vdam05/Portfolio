@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Menu with Flexbox</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .outer-container {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #333;
+            padding: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .inner-container {
+            display: flex;
+            gap: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .menu-item {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .menu-item:hover {
+            background-color: #575757;
+        }
+        @media (max-width: 900px) {
+            .outer-container {
+                justify-content: center;
+                padding: 10px 0;
+            }
+            .inner-container {
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: center;
+            }
+            .menu-item {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+        }
+        @media (max-width: 600px) {
+            .inner-container {
+                gap: 5px;
+                padding: 5px 0;
+            }
+            .menu-item {
+                padding: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <a href="#" class="menu-item">Home</a>
+            <a href="#" class="menu-item">About</a>
+            <a href="#" class="menu-item">Services</a>
+            <a href="#" class="menu-item">Contact</a>
+        </div>
+    </div>
+</body>
+</html>

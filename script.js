@@ -53,9 +53,6 @@ const openList = (list) => {
 
 /*---------------------------PROJECTS--------------------------------------*/ 
 //Switching project image and captions
-const extraString = `
-    <strong class="javascript-extra">JavaScript</strong>
-`;
 let captionArray = [
     {
         name: "image1",
@@ -63,28 +60,25 @@ let captionArray = [
     },
     {
         name: "image2",
-        caption: "My website built with plain HTML, CSS, and ",
+        caption: "My website built with plain HTML, CSS, and <strong class='javascript-extra'>JavaScript</strong>",
     },
 ];
-let projectButtons = document.querySelectorAll(".imageId");
-let projectImage = document.querySelector(".projects-image");
-let projectImageCaption = document.querySelector(".project-image-cap");
+const projectButtons = document.querySelectorAll(".imageId");
+const projectImage = document.querySelector(".projects-image");
+const projectImageCaption = document.querySelector(".project-image-cap");
 const mainCaption = (e) => {
     const chosenButton = e.currentTarget;
-    const chosenImg = `url(./images/project-imgs/${chosenButton.id}.png)`;
+    const chosenImg = `url(./images/project-imgs/${chosenButton.id.substr(0,6)}.png)`;
     let chosenCaption = "";
     projectImage.style.backgroundImage = chosenImg;
-    projectButtons.forEach((button) => {
-        button.style.backgroundColor = "white";
-    })
+    projectButtons.forEach((button) => button.style.backgroundColor = "white");
     chosenButton.style.backgroundColor = "red";
-    projectImageCaption.innerText = "";
     try {
         chosenCaption = captionArray.find((element) => element.name === chosenButton.id).caption;
     } catch (error) {
         chosenCaption= "Seems like there is nothing here??? Check out my other things then.";
     }
-    projectImageCaption.innerHTML = chosenButton.id === "image2" ? chosenCaption + extraString : chosenCaption;
+    projectImageCaption.innerHTML = chosenCaption;
 };
 projectButtons.forEach((button) => button.addEventListener("click", mainCaption));
 /*---------------------------PROJECTS--------------------------------------*/ 
