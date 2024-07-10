@@ -68,7 +68,7 @@ const projectImage = document.querySelector(".projects-image");
 const projectImageCaption = document.querySelector(".project-image-cap");
 const mainCaption = (e) => {
     const chosenButton = e.currentTarget;
-    const chosenImg = `url(./images/project-imgs/${chosenButton.id.substr(0,6)}.png)`;
+    const chosenImg = `url(./images/project-imgs/${chosenButton.id}.png)`;
     let chosenCaption = "";
     projectImage.style.backgroundImage = chosenImg;
     projectButtons.forEach((button) => button.style.backgroundColor = "white");

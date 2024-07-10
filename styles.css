@@ -18,7 +18,7 @@ body {
 }
 /*---------------------------------Header here-------------------------------------*/
 header {
-    height: 3rem;
+    height: 3.5rem;
     position: sticky;
     top: 0px;
     z-index: 5;
@@ -31,8 +31,8 @@ header {
     align-items: center;
     height: 100%; /*header is an indeterminate height*/
 }
-.shortened-list {
-    display: none; /*to hide until media queries*/
+.nav-unit {
+    display: none;
 }
 .list {
     grid-column: 9 / 15;
@@ -280,21 +280,28 @@ header {
 
 /*---------------------------------Contacts here-------------------------------------*/
 #contacts {
-    height: 15vh;
+    height: 25vh;
     background-image: linear-gradient(to right, rgba(2,37,78,1),rgba(4,56,126,1));
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-area {
+    height: 100%;
+    width: 75%;
 }
 .contact-socials {
-    height: 100%;
-    width: 50%;
+    width: 30%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     color: white;
-    column-gap: 5%;
-
+    margin: auto;
+    column-gap: 4%;
 }
 .contact-socials a:link, .contact-socials a:visited {
     text-decoration: none;
@@ -307,23 +314,26 @@ header {
     height: 50px;
     width: 50px;
     opacity: 0.5px;
+    border-radius: 30%;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
 }
-
+.socials-logo:hover {
+    transform: translateY(-5px);
+}
 .contact-message {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    position: absolute; 
-    top: 0%;
-    left: 50%;
     color: white;
-    transform: translateX(30px);
-    font-size: 2rem;
     text-align: center;
+    font-size: 1.5rem;
+    font-style: italic;   
+    font-weight: 500;
 }
 /*---------------------------------Contacts end here-------------------------------------*/
 
@@ -332,7 +342,7 @@ header {
     .list {
         display: none;
     }
-    .shortened-list {
+    .nav-unit {
         display: block;
     }
 }
@@ -342,5 +352,6 @@ header {
         column-gap: 7.5%;
     }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) and (max-width: 1200px){
+
 }
