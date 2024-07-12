@@ -15,6 +15,7 @@
 	<body>
 		<header>
 			<nav class="navigation">
+				<input type="checkbox" class="nav-unit">
 				<ul class="list">
 					<a href="#intro">Introduction</a>
 					<a href="#experience">Experience</a>
@@ -22,7 +23,6 @@
 					<a href="#projects">Projects</a>
 					<a href="#contacts">Contacts</a>
 				</ul>
-				<input type="checkbox" class="nav-unit">
 			</nav>
 		</header>
 		<main>
@@ -41,7 +41,7 @@
 				<article class="skills-section">
 					<div class="about-me-paragraph">
 						<h>About Me</h>
-						<p>
+						<p class="about-me-text">
 							I am a University of New Orleans student who is set to graduate in approximately May 2027. Fluent in both Vietnamese and English.
 						</p>
 					</div>
@@ -68,16 +68,19 @@
 			<section id="projects">
 				<!--Buttons to switch images-->
 				<label class="switching" for="projects-images-switch" aria-label="buttonSwitching">
-					Here are my projects
 					<button id="image1" class="imageId" name="projects-images-switch"></button>
 					<button id="image2" class="imageId" name="projects-images-switch"></button>
 					<button id="image3" class="imageId" name="projects-images-switch"></button>
 					<button id="image4" class="imageId" name="projects-images-switch"></button>
 					<button id="image5" class="imageId" name="projects-images-switch"></button>
 				</label>
-				<div class="projects-image"></div>
+				<div class="projects-image-section">
+					<div class="projects-image"></div>
+				</div>
 				<!--Default caption section-->
-				<div class="project-image-cap">Caption changes with pictures. Start Clicking!</div>
+				<div class="project-image-cap">
+					Caption changes with pictures.
+				</div>
 			</section>
 		</main>
 		<footer id="contacts">

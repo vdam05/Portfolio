@@ -32,7 +32,7 @@ function menuSelected (e) {
 const mainHeader = document.querySelector(".about-me-paragraph h");
 const appearingPar = document.querySelector(".about-me-paragraph p");
 mainHeader.addEventListener("click", () => {
-   appearingPar.style.opacity = "1";
+  appearingPar.classList.toggle("about-me-text");
 }) 
 //Interactable skills lists
 const openList = (list) => {
@@ -53,7 +53,7 @@ const openList = (list) => {
 
 /*---------------------------PROJECTS--------------------------------------*/ 
 //Switching project image and captions
-let captionArray = [
+const captionArray = [
     {
         name: "image1",
         caption: "This is my first Java project about making a basic game using StdDraw",
@@ -79,6 +79,7 @@ const mainCaption = (e) => {
         chosenCaption= "Seems like there is nothing here??? Check out my other things then.";
     }
     projectImageCaption.innerHTML = chosenCaption;
+
 };
 projectButtons.forEach((button) => button.addEventListener("click", mainCaption));
 /*---------------------------PROJECTS--------------------------------------*/ 
