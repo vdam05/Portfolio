@@ -33,8 +33,17 @@ header {
 }
 .nav-unit {
     display: none;
-    height: 100%;
-    width: 30px;
+}
+.nav-unit input, .nav-unit::before, .nav-unit::after {
+    content: "";
+    height: 5px;
+    width: 40px;
+    border-radius: 9999px;
+    background-color: white;
+}
+.nav-unit input {
+    appearance: none;
+    pointer-events: none;
 }
 .list {
     grid-column: 9 / 15;
@@ -363,7 +372,9 @@ header {
         display: none;
     }
     .nav-unit {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
     .nav-unit:checked ~ .list { /*Tilde affects adjacent elements, same as using + but for general purposes*/
         display: flex;
