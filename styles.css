@@ -11,7 +11,6 @@
 }
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 body {
     font-family: var(--main-font);
@@ -19,40 +18,49 @@ body {
 /*---------------------------------Header here-------------------------------------*/
 header {
     height: 3.5rem;
+    width: 100%;
     position: sticky;
     top: 0px;
     z-index: 5;
     background: #0A014F;
 }
 .navigation {
-    display: grid;
-    grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     height: 100%; /*header is an indeterminate height*/
+    width: 100%;
 }
 .nav-unit {
     display: none;
+    cursor: pointer;
+    margin-left: 10px;
 }
-.nav-unit input, .nav-unit::before, .nav-unit::after {
-    content: "";
+.bar {
     height: 5px;
-    width: 40px;
-    border-radius: 9999px;
+    width: 35px;
     background-color: white;
+    transition: all 0.5s ease;
 }
-.nav-unit input {
-    appearance: none;
-    pointer-events: none;
+.hamburger-clicked .bar {
+    background-color: red;
+}
+.hamburger-clicked #bar-1 {
+    transform: translate(0, 11px) rotate(45deg);
+}
+.hamburger-clicked #bar-2 {
+    opacity: 0;
+}
+.hamburger-clicked #bar-3 {
+    transform: translate(0, -11px) rotate(-45deg);
 }
 .list {
-    grid-column: 9 / 15;
-    grid-row: 3 / 4;
-    place-items: center flex-end;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-right: 10px;
     column-gap: 10%;
     animation-name: appear-in;
     animation-duration: 1s;
@@ -368,25 +376,35 @@ header {
 
 /*All media queries*/
 @media only screen and (max-width: 768px) {
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
     .list {
         display: none;
+    }
+    .list-small {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .nav-unit {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-    }
-    .nav-unit:checked ~ .list { /*Tilde affects adjacent elements, same as using + but for general purposes*/
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
+        row-gap: 6px;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
     .list {
-        grid-column: 7 / 15;
-        column-gap: 7.5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 }
 @media only screen and (min-width: 1000px) and (max-width: 1200px){

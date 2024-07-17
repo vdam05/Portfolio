@@ -1,3 +1,14 @@
+/*---------------------------HEADER--------------------------------------*/ 
+//For hamburger icon
+const hamburger = document.querySelector(".nav-unit");
+const list = document.querySelector(".list");
+hamburger.addEventListener('click', () => {
+    console.log("Clicked!"); //this works
+    hamburger.classList.toggle("hamburger-clicked"); 
+    list.classList.toggle("list-small");
+});
+/*---------------------------HEADER--------------------------------------*/ 
+
 /*---------------------------INTRO--------------------------------------*/ 
 //Changing the color of the name
 let colors = ["red", "blue", "green", "cyan", "blueviolet", "brown"];
