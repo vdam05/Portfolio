@@ -28,6 +28,8 @@ function menuSelected (e) {
         colorReset(item);
     }
     colorChange(e.currentTarget);
+    list.classList.toggle("list-small");
+    hamburger.classList.toggle("hamburger-clicked"); 
 }
 /*---------------------------HEADER--------------------------------------*/ 
 
