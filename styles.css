@@ -17,8 +17,8 @@ body {
 }
 /*---------------------------------Header here-------------------------------------*/
 header {
-    height: 3.5rem;
     width: 100%;
+    height: 3.5rem;
     position: sticky;
     top: 0px;
     z-index: 5;
@@ -27,15 +27,17 @@ header {
 .navigation {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: end;
     align-items: center;
-    height: 100%; /*header is an indeterminate height*/
-    width: 100%;
+    width: 100%; 
+    height: 100%;
+    transition: height 0.5s ease;
 }
 .nav-unit {
     display: none;
     cursor: pointer;
     margin-left: 10px;
+    height: 100%;
 }
 .bar {
     height: 5px;
@@ -60,15 +62,15 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
-    column-gap: 10%;
     animation-name: appear-in;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 0ms;
     animation-iteration-count: 1;
+    margin-right: 1.5rem;
 }
 .list a {
+    font-size: 1.1rem;
     background: transparent;
     height: 100%;
     color: var(--font-color-menu);
@@ -77,6 +79,7 @@ header {
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
+    margin: 0 1.5rem;
 }
 @keyframes appear-in  { /*translateY for moving an element. Opacity for transparent*/
     0% {
@@ -376,11 +379,11 @@ header {
 
 /*All media queries*/
 @media only screen and (max-width: 768px) {
+    .header {
+        min-height: 3.5rem;
+    }
     .navigation {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-content: center;
     }
     .list {
         display: none;
@@ -396,16 +399,13 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        align-self: flex-start;
         row-gap: 6px;
+        margin-right: 1.5rem;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
-    .list {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
+
 }
 @media only screen and (min-width: 1000px) and (max-width: 1200px){
 

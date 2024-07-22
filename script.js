@@ -2,16 +2,38 @@
 //For hamburger icon
 const hamburger = document.querySelector(".nav-unit");
 const list = document.querySelector(".list");
+const listItem = document.querySelectorAll(".list a");
 hamburger.addEventListener('click', () => {
     console.log("Clicked!"); //this works
     hamburger.classList.toggle("hamburger-clicked"); 
     list.classList.toggle("list-small");
 });
+//Changing the color of the header menu items
+const listItemSelect = document.querySelectorAll(".list a");
+listItemSelect.forEach(item => item.addEventListener('click', menuSelected));
+function menuSelected (e) { 
+    //Helper functions
+    const colorReset = (item) => {
+        item.style.color = "#e0e0e0";
+        item.style.textUnderlineOffset = "0%";
+        item.style.textDecoration = "none";
+    }
+    const colorChange = (item) => {
+        item.style.color = "rgb(250, 250, 102)";
+        item.style.textDecoration = "underline";
+        item.style.textUnderlineOffset = "25%";
+    }
+    //
+    for (const item of listItemSelect) {
+        colorReset(item);
+    }
+    colorChange(e.currentTarget);
+}
 /*---------------------------HEADER--------------------------------------*/ 
 
 /*---------------------------INTRO--------------------------------------*/ 
 //Changing the color of the name
-let colors = ["red", "blue", "green", "cyan", "blueviolet", "brown"];
+const colors = ["red", "blue", "green", "cyan", "blueviolet", "brown"];
 let index = 0;
 const specialEffectName = document.querySelector("#clickable");
 specialEffectName.addEventListener('click', changeColors);
@@ -22,19 +44,6 @@ function changeColors() {
     } 
     specialEffectName.style.color = colors[index];
     
-}
-//Changing the color of the header menu items
-const listItemSelect = document.querySelectorAll(".list a");
-listItemSelect.forEach(item => item.addEventListener('click', menuSelected));
-function menuSelected (e) { 
-    for (const item of listItemSelect) {
-        item.style.color = "#e0e0e0";
-        item.style.textUnderlineOffset = "0%";
-        item.style.textDecoration = "none";
-    }
-    e.currentTarget.style.color = "rgb(250, 250, 102)";
-    e.currentTarget.style.textDecoration = "underline";
-    e.currentTarget.style.textUnderlineOffset = "25%";
 }
 /*---------------------------INTRO--------------------------------------*/ 
 
