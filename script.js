@@ -3,11 +3,11 @@
 const hamburger = document.querySelector(".nav-unit");
 const list = document.querySelector(".list");
 const listItem = document.querySelectorAll(".list a");
-hamburger.addEventListener('click', () => {
-    console.log("Clicked!"); //this works
+const smallListClick = () => {
     hamburger.classList.toggle("hamburger-clicked"); 
     list.classList.toggle("list-small");
-});
+}
+hamburger.addEventListener('click', smallListClick);
 //Changing the color of the header menu items
 const listItemSelect = document.querySelectorAll(".list a");
 listItemSelect.forEach(item => item.addEventListener('click', menuSelected));
@@ -28,8 +28,7 @@ function menuSelected (e) {
         colorReset(item);
     }
     colorChange(e.currentTarget);
-    list.classList.toggle("list-small");
-    hamburger.classList.toggle("hamburger-clicked"); 
+    smallListClick();
 }
 /*---------------------------HEADER--------------------------------------*/ 
 
