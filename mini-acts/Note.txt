@@ -1,3 +1,0 @@
-Here lies the links for the mini-games built in HTML, CSS, JavaScript
-1st one is a clicking game for example
-/*To be updated once progrezzed*/
