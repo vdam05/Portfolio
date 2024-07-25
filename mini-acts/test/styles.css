@@ -1,8 +1,0 @@
-.container {
-    display: inline-block;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    transition: width 0.5s ease, height 0.5s ease;
-    white-space: nowrap; /* Prevent text wrapping to maintain fit-content behavior */
-  }

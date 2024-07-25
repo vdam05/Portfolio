@@ -74,19 +74,25 @@ const openList = (list) => {
 
 /*---------------------------PROJECTS--------------------------------------*/ 
 //Switching project image and captions
-const captionArray = [
-    {
-        name: "image1",
-        caption: "This is my first Java project about making a basic game using StdDraw",
-    },
-    {
-        name: "image2",
-        caption: "My website built with plain HTML, CSS, and <strong class='javascript-extra'>JavaScript</strong>",
-    },
-];
 const projectButtons = document.querySelectorAll(".imageId");
 const projectImage = document.querySelector(".projects-image");
 const projectImageCaption = document.querySelector(".project-image-cap");
+class Caption {
+    constructor(name, caption, specific) {
+        this.name = name;
+        this.caption = caption;
+        this.specific = `<span class="project-image-cap-specific">${specific}</span>` || 0; //optional parameter
+    }
+    connectingCap() {
+        this.caption = this.caption.concat(this.specific);
+    }
+}
+//List of captions
+const caption1 = new Caption("image1", "Making a small space game using Java");
+const caption2 = new Caption("image2", "This website using HTML, CSS, and ", "JavaScript");
+caption2.connectingCap();
+//
+const captionArray = [caption1, caption2];
 const mainCaption = (e) => {
     const chosenButton = e.currentTarget;
     const chosenImg = `url(./images/project-imgs/${chosenButton.id}.png)`;
@@ -96,6 +102,7 @@ const mainCaption = (e) => {
     chosenButton.style.backgroundColor = "red";
     try {
         chosenCaption = captionArray.find((element) => element.name === chosenButton.id).caption;
+        console.log(chosenCaption);
     } catch (error) {
         chosenCaption= "Seems like there is nothing here??? Check out my other things then.";
     }

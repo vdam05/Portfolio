@@ -17,6 +17,7 @@ body {
 }
 .checker {
     border: 1px solid white;
+    style
 }
 /*---------------------------------Header here-------------------------------------*/
 header {
@@ -308,6 +309,10 @@ header {
     transition: width 1s ease;
     display: block;
     margin-top: 20px;
+}
+.project-image-cap-specific {
+    color: red;
+    font-weight: 700;
 }
 .javascript-extra {
     color: red;
