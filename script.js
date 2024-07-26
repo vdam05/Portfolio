@@ -80,31 +80,40 @@ const projectImageCaption = document.querySelector(".project-image-cap");
 class Caption {
     constructor(name, caption, specific) {
         this.name = name;
-        this.caption = caption;
-        this.specific = `<span class="project-image-cap-specific">${specific}</span>` || 0; //optional parameter
+        this.caption = caption;        
+        this.specific = specific || 0; 
+        this.fullCaption = caption; //default fullCaption
     }
-    connectingCap() {
-        this.caption = this.caption.concat(this.specific);
+    constructCap() {
+        const htmlCap = `<span>${this.specific}</span>`;
+        this.fullCaption = this.caption.concat(htmlCap);
     }
 }
 //List of captions
 const caption1 = new Caption("image1", "Making a small space game using Java");
 const caption2 = new Caption("image2", "This website using HTML, CSS, and ", "JavaScript");
-caption2.connectingCap();
+caption2.constructCap();
 //
 const captionArray = [caption1, caption2];
 const mainCaption = (e) => {
-    const chosenButton = e.currentTarget;
-    const chosenImg = `url(./images/project-imgs/${chosenButton.id}.png)`;
     let chosenCaption = "";
-    projectImage.style.backgroundImage = chosenImg;
-    projectButtons.forEach((button) => button.style.backgroundColor = "white");
-    chosenButton.style.backgroundColor = "red";
+    const chosenButton = e.currentTarget;
+    //Helpers
+    const resetButtons = (button) => {
+        projectButtons.forEach((button) => button.style.backgroundColor = "white");
+        button.style.backgroundColor = "red";
+    }
+    const selectImg = (button) => {
+        const chosenImg = `url(./images/project-imgs/${button.id}.png)`;
+        projectImage.style.backgroundImage = chosenImg;
+    }
+    //
+    selectImg(chosenButton);
+    resetButtons(chosenButton);
     try {
-        chosenCaption = captionArray.find((element) => element.name === chosenButton.id).caption;
-        console.log(chosenCaption);
+        chosenCaption = captionArray.find((element) => element.name === chosenButton.id).fullCaption;
     } catch (error) {
-        chosenCaption= "Seems like there is nothing here??? Check out my other things then.";
+        chosenCaption = "Seems like there is nothing here??? Check out my other things then.";
     }
     projectImageCaption.innerHTML = chosenCaption;
 

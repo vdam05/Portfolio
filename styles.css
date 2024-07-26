@@ -8,6 +8,7 @@
     --main-font: Roboto, sans-serif;
     --font-color-menu: #e0e0e0;
     --font-color-main: hsl(245, 100%, 8%);
+    scroll-padding-top: 2rem;
 }
 html {
     scroll-behavior: smooth;
@@ -17,14 +18,13 @@ body {
 }
 .checker {
     border: 1px solid white;
-    style
 }
 /*---------------------------------Header here-------------------------------------*/
 header {
     width: 100%;
     position: sticky;
     top: 0px;
-    z-index: 5;
+    z-index: 100;
     background: #0A014F;
 }
 .navigation {
@@ -98,7 +98,8 @@ header {
 
 /*---------------------------------Intro here-------------------------------------*/
 #intro {
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
     background: linear-gradient(to right, #3498DB 0%, #3498DB 50%, #00AAFF 50%, #00AAFF 100% );
     position: relative;
 }
@@ -114,8 +115,9 @@ header {
     align-items: center; 
     color: var(--font-color-main);
     font-weight: 900;
-    font-size:x-large;
+    font-size: 1.5rem;
     user-select: none;
+    text-align: center;
 }
 #first-sentence {
     font-size: 5rem;
@@ -174,7 +176,7 @@ header {
     position: absolute;
     left: 10%;
     top: 10%;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .about-me-paragraph {
     width: 100%;
@@ -193,7 +195,7 @@ header {
 }
 .about-me-paragraph p {
     text-align: center;
-    transition: opacity 1.75s ease, transform 1.75s ease; 
+    transition: opacity 1.75s ease, transform 1.75s ease;
 }
 .about-me-text {
     opacity: 0;
@@ -310,7 +312,7 @@ header {
     display: block;
     margin-top: 20px;
 }
-.project-image-cap-specific {
+.project-image-cap span {
     color: red;
     font-weight: 700;
 }
@@ -387,6 +389,7 @@ header {
 /*---------------------------------Contacts end here-------------------------------------*/
 
 /*All media queries*/
+/*Media queries for widths*/
 @media only screen and (max-width: 768px) {
     /*Header*/
     .navigation {
@@ -427,9 +430,7 @@ header {
         margin-right: 1.5rem;
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 1000px) {
+@media only screen and (min-width: 1200px) {
 
 }
-@media only screen and (min-width: 1000px) and (max-width: 1200px){
-
-}
+/*Media queries for height*/

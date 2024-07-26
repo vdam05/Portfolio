@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --background-first-color: #3498db;
+}
+html {
+    overflow-y: hidden;
+}
+.menu-screen {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    animation: menu-background 3s ease 0ms infinite;
+}
+.intro {
+    height: 100px;
+    width: 500px;
+    font-size: 2.5rem;
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: midnightblue;
+    animation: appear-in 1.5s ease-in 0ms;
+}
+.game-button {
+    height: 75px;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color:gold;
+    font-size: 2rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+.game-button:hover {
+    transform: scale(1.25);
+}
+.start-game {
+    animation: appear-in 2s ease-in 0ms;
+}
+.load-game {
+    animation: appear-in 2.5s ease-in 0ms;
+}
+.credit {
+    animation: appear-in 3s ease-in 0ms;
+}
+@keyframes appear-in {
+   0% {
+        transform: translateY(-3000px);
+   }
+   100% {
+        transform: translateY(0);
+   }
+}
