@@ -4,7 +4,12 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open game.html",
+            "file": "d:\\Resume_Projects\\Portfolio\\mini-acts\\cool-turn-game\\index.html",
+        }
         {
             "type": "chrome",
             "request": "launch",
