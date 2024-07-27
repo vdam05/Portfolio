@@ -22,6 +22,12 @@ class Game {
 class Character {
 
 }
+class Card {
+    constructor(type, property) {
+        this.type = type;
+        this.property = property;
+    }
+}
 class Enemies {
     constructor(type, positions) {
         this.type = type;

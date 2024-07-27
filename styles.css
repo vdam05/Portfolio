@@ -9,6 +9,12 @@
     --font-color-menu: #e0e0e0;
     --font-color-main: hsl(245, 100%, 8%);
     scroll-padding-top: 2rem;
+
+}
+@media screen and (max-width: 968px) {
+    :root {
+        scroll-padding-top: calc(500px + 2rem);
+    }
 }
 html {
     scroll-behavior: smooth;
@@ -94,11 +100,55 @@ header {
         opacity: 1;
     }
 }
+/*Media queries for header*/
+@media only screen and (max-width: 768px) {
+    /*Header*/
+    :root {
+        scroll-padding-top: 300px;
+    }
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .list {
+        opacity: 0;
+        height: 0;
+        visibility: hidden;
+        animation-name: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-evenly;
+    }
+    .list a {
+        transform: translateY(-20px);
+        transition: transform 0.5s ease;
+    }
+    .list-small {
+        opacity: 1;
+        height: 50vh;
+        visibility: visible;
+    }
+    .list-small a{
+        transform: translateY(0);
+    }
+    .nav-unit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-start;
+        row-gap: 6px;
+        margin-right: 1.5rem;
+    }
+}
 /*---------------------------------Header ends here-------------------------------------*/
 
 /*---------------------------------Intro here-------------------------------------*/
 #intro {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     background: linear-gradient(to right, #3498DB 0%, #3498DB 50%, #00AAFF 50%, #00AAFF 100% );
     position: relative;
@@ -133,6 +183,33 @@ header {
 .resume-button {
     display: none;
 }
+@media screen and (max-width: 950px) {
+    .intro-paragraph {
+        width: 80%;
+        height: 60%;
+        position: absolute;
+        left: 10%;
+    }
+    #clickable {
+        font-size: 5.5rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .intro-paragraph {
+        height: 80%;
+        width: 80%;
+        top: 10%;
+    }
+    #first-sentence {
+        font-size: 4rem;
+    }
+    #clickable {
+        font-size: 4rem;
+    }
+}
+@media screen and (max-height: 1000px) {
+
+}
 /*---------------------------------Intro ends here-------------------------------------*/
 
 /*---------------------------------Experience here-------------------------------------*/
@@ -161,11 +238,32 @@ header {
     z-index: 1;
     font-size: 3rem;
 }
+/*Media queries for experience section*/
+@media screen and (max-width: 600px) {
+    .sign {
+        width: 90%;
+        height: 40%;
+        left: 5%;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .sign {
+        width: 80%;
+        left: 10%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+    .sign {
+        width: 70%;
+        left: 15%;
+    }
+}
 /*---------------------------------Experience ends here-------------------------------------*/
 
 /*---------------------------------Skills here-------------------------------------*/
 #skills {
     height: 95vh;
+    width: 100%;
     background-image: linear-gradient(180deg,  rgba(84,212,228,1) 0.2%, rgba(68,36,164,1) 99.9%);
     position: relative;
 }
@@ -186,6 +284,7 @@ header {
     align-items: center;
     justify-content: center;
     row-gap: 2rem;
+    background-color: white;
 }
 .about-me-paragraph h {
     font-size: 5rem;
@@ -196,15 +295,17 @@ header {
 .about-me-paragraph p {
     text-align: center;
     transition: opacity 1.75s ease, transform 1.75s ease;
+    margin-left: 20px;
+    margin-right: 20px;
 }
+/*JS class*/
 .about-me-text {
     opacity: 0;
     transform: translateY(-20px);
 }
-.skills-section div ol, .about-me-paragraph {
-    border: 1px solid black;
+/**/
+.skills-section ol, .about-me-paragraph, .skills-section ol div {
     border-radius: 10px;
-    background-color: white;
 }
 .skills-list {
     height: 55%;
@@ -251,6 +352,68 @@ header {
     justify-content: space-evenly;
     align-items: center;
     background: linear-gradient(180deg, rgb(255, 165, 0), rgb(255, 140, 0));
+}
+/*Media queries follow a cascading pattern. So from biggest to smallest*/
+@media screen and (max-width: 1200px){
+    .skills-section {
+        width: 90%;
+        left: 5%;
+        font-size: 2.2rem;
+    }
+    .skills-list ol{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #skills {
+        height: 150vh;
+    }
+    .skills-section {
+        height: 90%;
+        top: 5%;
+        font-size: 2rem;
+    }
+    .about-me-paragraph h {
+        font-size: 4rem;
+    }
+    .about-me-paragraph p {
+        font-size: 2rem;
+    }
+    .skills-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+    }
+    .skills-list ol {
+        width: 65%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .skills-section {
+        font-size: 1.7rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .skills-section {
+        width: 90%;
+        top: 20px;
+        height: 90%;
+    }
+    .about-me-paragraph h {
+        font-size: 3.5rem;
+    }
+    .about-me-paragraph p {
+        font-size: 1.8rem;
+    }
+    .skills-list {
+        height: 60%;
+    }
+    .skills-list ol {
+        width: 100%;
+        height: 50%;
+    }
 }
 /*---------------------------------Skills end here-------------------------------------*/
 
@@ -327,6 +490,10 @@ header {
 .javascript-extra:active ~ #extra-javascript-projects {
     height: 100%;
 }
+/*Media queries for projects*/
+@media screen and (max-width: 1000px) {
+
+}
 /*---------------------------------Projects end here-------------------------------------*/
 
 
@@ -387,50 +554,3 @@ header {
     font-size: 1.5rem;
 }
 /*---------------------------------Contacts end here-------------------------------------*/
-
-/*All media queries*/
-/*Media queries for widths*/
-@media only screen and (max-width: 768px) {
-    /*Header*/
-    .navigation {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .list {
-        opacity: 0;
-        height: 0;
-        visibility: hidden;
-        animation-name: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content:space-evenly;
-    }
-    .list a {
-        transform: translateY(-20px);
-        transition: transform 0.5s ease;
-    }
-    .list-small {
-        opacity: 1;
-        height: 50vh;
-        visibility: visible;
-    }
-    .list-small a{
-        transform: translateY(0);
-    }
-    .nav-unit {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-self: flex-start;
-        row-gap: 6px;
-        margin-right: 1.5rem;
-    }
-}
-@media only screen and (min-width: 1200px) {
-
-}
-/*Media queries for height*/
