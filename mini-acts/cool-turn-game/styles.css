@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /*border: 1px solid black;*/
 }
 :root {
     --background-first-color: #3498db;
@@ -31,12 +32,7 @@ html {
     align-items: center;
     color: midnightblue;
     animation: appear-in 1.5s ease-in 0ms;
-    transition: all 0.5s ease;
-    transform: scale(1);
     cursor: pointer;
-}
-.intro:hover {
-    transform: scale(1.25);
 }
 .game-button {
     height: 75px;
@@ -46,18 +42,19 @@ html {
     background-color:gold;
     font-size: 2rem;
     cursor: pointer;
-    transition-property: transform;
-    transition-timing-function: ease;
-    transform: translateY(1500px);
+    transition-property: all;
+    transition-timing-function: ease-in;
+    transform: scale(1) translateY(500px);
+    display: none;
 }
 #start {
     transition-duration: 1s;
 }
 #load {
-    transition-duration: 2s;
+    transition-duration: 1.5s;
 }
 #credit {
-    transition-duration: 3s;
+    transition-duration: 2s;
 }
 .start-game, .load-game, .credit-game{
     transform: translateY(0px);

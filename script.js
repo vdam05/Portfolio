@@ -116,7 +116,6 @@ const mainCaption = (e) => {
         chosenCaption = "Seems like there is nothing here??? Check out my other things then.";
     }
     projectImageCaption.innerHTML = chosenCaption;
-
 };
 projectButtons.forEach((button) => button.addEventListener("click", mainCaption));
 /*---------------------------PROJECTS--------------------------------------*/ 
