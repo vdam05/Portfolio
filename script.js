@@ -28,7 +28,7 @@ function menuSelected (e) {
         colorReset(item);
     }
     colorChange(e.currentTarget);
-    smallListClick();
+    setTimeout(smallListClick, 1000);
 }
 /*---------------------------HEADER--------------------------------------*/ 
 

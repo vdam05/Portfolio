@@ -8,13 +8,7 @@
     --main-font: Roboto, sans-serif;
     --font-color-menu: #e0e0e0;
     --font-color-main: hsl(245, 100%, 8%);
-    scroll-padding-top: 2rem;
-
-}
-@media screen and (max-width: 968px) {
-    :root {
-        scroll-padding-top: calc(500px + 2rem);
-    }
+    scroll-padding-top: 3.4rem;
 }
 html {
     scroll-behavior: smooth;
@@ -39,7 +33,6 @@ header {
     justify-content: end;
     align-items: center;
     width: 100%; 
-    height: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
@@ -103,9 +96,6 @@ header {
 /*Media queries for header*/
 @media only screen and (max-width: 768px) {
     /*Header*/
-    :root {
-        scroll-padding-top: 300px;
-    }
     .navigation {
         display: flex;
         flex-direction: column;
@@ -395,7 +385,7 @@ header {
         font-size: 1.7rem;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .skills-section {
         width: 90%;
         top: 20px;
@@ -408,11 +398,11 @@ header {
         font-size: 1.8rem;
     }
     .skills-list {
-        height: 60%;
+        height: 70%;
     }
     .skills-list ol {
         width: 100%;
-        height: 50%;
+        height: 60%;
     }
 }
 /*---------------------------------Skills end here-------------------------------------*/
