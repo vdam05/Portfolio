@@ -104,18 +104,19 @@ const mainCaption = (e) => {
         button.style.backgroundColor = "red";
     }
     const selectImg = (button) => {
-        const chosenImg = `url(./images/project-imgs/${button.id}.png)`;
-        projectImage.style.backgroundImage = chosenImg;
+        const chosenImg = `./images/project-imgs/${button.id}.png`;
+        projectImage.src = chosenImg;
     }
     resetButtons(chosenButton);
-
     selectImg(chosenButton);
+    const defaultCaption = "Empty here...";
     try {
         chosenCaption = captionArray.find((element) => element.name === chosenButton.id).fullCaption;
     } catch (error) {
-        chosenCaption = "Seems like there is nothing here??? Check out my other things then.";
+        chosenCaption = defaultCaption;
     }
     projectImageCaption.innerHTML = chosenCaption;
+    projectImage.alt = chosenCaption != defaultCaption ? chosenCaption : defaultCaption;
 };
 projectButtons.forEach((button) => button.addEventListener("click", mainCaption));
 /*---------------------------PROJECTS--------------------------------------*/ 
