@@ -170,8 +170,46 @@ header {
     transition-timing-function: ease-in-out;
     transition-delay: 0ms;
 }
-.resume-button {
-    display: none;
+.intro-buttons {
+    width: 70%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+#resume-button, #contact-button {
+    height: 50px;
+    width: 300px;
+    font-size: 1.5rem;
+    border-radius: 40px;
+    font-weight: 700;
+    color: red;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+#resume-button:hover, #contact-button:hover{
+    animation: shake-button 0.5s ease 0ms infinite;
+    background-color: yellow;
+}
+@keyframes shake-button {
+    0% {
+        transform: rotateZ(-2deg);
+    }
+    25% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(2deg);
+    }
+    75% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(-2deg);
+    }
 }
 @media screen and (max-width: 950px) {
     .intro-paragraph {
@@ -182,6 +220,12 @@ header {
     }
     #clickable {
         font-size: 5.5rem;
+    }
+    .intro-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
 }
 @media screen and (max-width: 768px) {
@@ -415,9 +459,10 @@ header {
     position: relative;
 
 }
+/*TBA*/
 .projects-image-section {
-    height: 80%;
     width: 80%;
+    height: 80%;
     margin: auto;
     border: 5px solid yellow;
     border-radius: 10px;
@@ -425,12 +470,15 @@ header {
     transform: translateX(0%);
     overflow: hidden;
 }
+/**/
 .projects-image {
     height: 100%;
     width: 100%;
     background-image: none;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    margin: 0;
+    z-index: 0;
 }
 .switching {
     display: inline;
@@ -453,7 +501,66 @@ header {
     background: white;
     cursor: pointer;
     border-radius: 50%;
+}/* Unusable curtain animations (needs to be fixed TBA)
+.curtain {
+    height: 100%;
+    width: 50%;
+    z-index: 1;
 }
+.animate-curtain {
+    animation-timing-function: ease;
+    animation-duration: 5s;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+}
+#curtain-1 {
+    background-color: yellow; 
+    animation-name: curtain-animation-1;
+    position: relative;
+    left: -50%;
+    top: 0%;
+}
+#curtain-2 {
+    background-color: green;
+    animation-name: curtain-animation-2;
+    position: absolute;
+    left: 100%;
+    top: 0%;
+}
+@keyframes curtain-animation-1 {
+    0% {
+        left: -50%;
+    }
+    25% {
+        left: 0%;
+    }
+    50% {
+        left: 0%;
+    }
+    75% {
+        left: 0%;
+    }
+    100% {
+        left: -50%;
+    }
+}
+@keyframes curtain-animation-2 {
+    0% {
+       left: 100%;
+    }
+    25% {
+        left: 50%;
+    }
+    50% {
+        left: 50%;
+    }
+    75% {
+        left: 50%;
+    }
+    100% {
+       left: 100%;
+    }
+}*/
 .project-image-cap {
     width: fit-content;
     height: fit-content;
@@ -512,6 +619,7 @@ header {
     margin: auto;
     column-gap: 10px;
     row-gap: 10px;
+    margin-right: 20px;
 }
 .socials-logo {
     height: 50px;

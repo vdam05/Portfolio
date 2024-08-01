@@ -28,7 +28,7 @@ function menuSelected (e) {
         colorReset(item);
     }
     colorChange(e.currentTarget);
-    setTimeout(smallListClick, 1000);
+    setTimeout(smallListClick, 750);
 }
 /*---------------------------HEADER--------------------------------------*/ 
 
@@ -107,9 +107,9 @@ const mainCaption = (e) => {
         const chosenImg = `url(./images/project-imgs/${button.id}.png)`;
         projectImage.style.backgroundImage = chosenImg;
     }
-    //
-    selectImg(chosenButton);
     resetButtons(chosenButton);
+
+    selectImg(chosenButton);
     try {
         chosenCaption = captionArray.find((element) => element.name === chosenButton.id).fullCaption;
     } catch (error) {
@@ -120,8 +120,7 @@ const mainCaption = (e) => {
 projectButtons.forEach((button) => button.addEventListener("click", mainCaption));
 /*---------------------------PROJECTS--------------------------------------*/ 
 
-/*---------------------------CONTACTS--------------------------------------*/ 
-
+/*---------------------------CONTACTS--------------------------------------*/
 /*---------------------------CONTACTS--------------------------------------*/ 
 
 
