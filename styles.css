@@ -634,7 +634,7 @@ header {
         height: 250px;
     }
 }
-@media screen and (max-height: 500px) {
+@media screen and (min-height: 768px) and (max-height: 500px) {
     #projects {
         height: calc(100vh + 100px);
     }
