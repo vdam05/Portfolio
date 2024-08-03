@@ -241,8 +241,10 @@ header {
         font-size: 4rem;
     }
 }
-@media screen and (max-height: 1000px) {
-
+@media screen and (max-height: 400px) {
+    #intro {
+        height: calc(100vh + 200px);
+    }
 }
 /*---------------------------------Intro ends here-------------------------------------*/
 
@@ -442,11 +444,19 @@ header {
         font-size: 1.8rem;
     }
     .skills-list {
-        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
     }
     .skills-list ol {
         width: 100%;
-        height: 60%;
+        height: 40%;
+    }
+}
+@media screen and (max-height: 600px) {
+    #skills {
+        height: calc(100vh + 500px);
     }
 }
 /*---------------------------------Skills end here-------------------------------------*/
@@ -602,7 +612,18 @@ header {
 }
 @media screen and (max-width: 768px) {
     .projects-image-section {
+        height: 350px;
+        width: 95%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .projects-image-section {
         height: 300px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .projects-image-section {
+        height: 250px;
     }
 }
 /*---------------------------------Projects end here-------------------------------------*/
