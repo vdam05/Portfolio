@@ -593,7 +593,6 @@ header {
     height: 100%;
 }
 /*Media queries for projects*/
-/*To be continued to be worked on*/
 @media screen and (max-width: 1100px) {
     .projects-image-section {
         height: 75%;
@@ -611,21 +610,47 @@ header {
     }
 }
 @media screen and (max-width: 768px) {
+    #projects {
+        height: calc(100vh - 100px);
+    }
     .projects-image-section {
         height: 350px;
         width: 95%;
     }
 }
 @media screen and (max-width: 600px) {
+    #projects {
+        height: calc(100vh - 150px);
+    }
     .projects-image-section {
         height: 300px;
     }
 }
 @media screen and (max-width: 500px) {
+    #projects {
+        height: calc(100vh - 200px);
+    }
     .projects-image-section {
         height: 250px;
     }
 }
+@media screen and (max-height: 500px) {
+    #projects {
+        height: calc(100vh + 100px);
+    }
+}
+@media screen and (max-width: 768px) and (max-height: 550px) {
+    #projects {
+        height: 100vh;
+    }
+}
+@media screen and (max-width: 768px) and (max-height: 450px) {
+    #projects {
+        height: calc(100vh + 100px);
+    }
+} 
+/*Breaks by like 350px height*/
+
 /*---------------------------------Projects end here-------------------------------------*/
 
 
