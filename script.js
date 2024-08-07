@@ -84,15 +84,16 @@ class Caption {
         this.specific = specific || 0; 
         this.fullCaption = caption; //default fullCaption
     }
-    constructCap() {
-        const htmlCap = `<span>${this.specific}</span>`;
+    //Function to add a link to a word (specific)
+    constructCap(link) {
+        const htmlCap = `<a href=${link} target="_blank" class="caption-extra">${this.specific}</a>`;
         this.fullCaption = this.caption.concat(htmlCap);
     }
 }
 //List of captions
 const caption1 = new Caption("image1", "Making a small space game using Java");
 const caption2 = new Caption("image2", "This website using HTML, CSS, and ", "JavaScript");
-caption2.constructCap();
+caption2.constructCap("https://vdam05.github.io/Utility-App/");
 //
 const captionArray = [caption1, caption2];
 const mainCaption = (e) => {
