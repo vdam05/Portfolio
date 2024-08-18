@@ -93,7 +93,7 @@ class Caption {
 //List of captions
 const caption1 = new Caption("image1", "Making a small space game using Java");
 const caption2 = new Caption("image2", "This website using HTML, CSS, and ", "JavaScript");
-caption2.constructCap("https://vdam05.github.io/Utility-App/");
+caption2.constructCap("https://vdam05.github.io/Chill-And-Random/");
 //
 const captionArray = [caption1, caption2];
 const mainCaption = (e) => {
